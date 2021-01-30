@@ -1,7 +1,8 @@
 class Monster{
     constructor(x,y,width,height){
         var options={
-         isStatic:true
+            frictionAir:0.2,
+            density:10
         }
         this.body=Bodies.rectangle(x,y,width,height,options);
         this.width=width;
@@ -10,8 +11,10 @@ class Monster{
         World.add(world,this.body);
     }
     display(){
+        push ();
         imageMode(CENTER);
-        image(this.image,0,0,this.width,this.height);
+        image(this.image,1000,200,this.width,this.height);
+        pop ();
 
 
     }

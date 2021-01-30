@@ -51,11 +51,11 @@ function setup() {
   block25=new Block(680,350,40,40);
   block26=new Block(680,310,40,40);
 
-  hero=new Hero(300,300,1,1);
+  hero=new Hero(200,500,250,150);
 
-  fly= new Fly(hero.body,{x:300,y:100});
+  fly= new Fly(hero.body,{x:200,y:200});
   
-  monster=new Monster(1000,200,50,50);
+  monster=new Monster(1000,400,250,250);
 
 
   Engine.run(engine);
@@ -63,6 +63,8 @@ function setup() {
 
 function draw() {
   background(backgroundImg);
+
+  Engine.update(engine);
 
   ground.display();
   block1.display();
@@ -105,6 +107,7 @@ function draw() {
 }
 function mouseDragged(){
 
-	Body.setPosition(hero.body,{x:mouseX,y:mouseY});
+	Matter.Body.setPosition(hero.body,{x:mouseX,y:mouseY});
 }
+
 

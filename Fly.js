@@ -4,7 +4,7 @@ class Fly{
             bodyA: bodyA,
             pointB: pointB,
             stiffness:0.01,
-            length:10
+            length:15
         }
         this.pointB=pointB;
         this.fly= Constraint.create(options);
@@ -20,4 +20,4 @@ class Fly{
         }
 
     }
-}
+    }

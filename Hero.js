@@ -4,10 +4,13 @@ class Hero{
             frictionAir:1,
             density:40
         }
-        this.x=x;
-        this.y=y;
+
         this.body=Bodies.rectangle(x,y,width,height,options);
         this.image=loadImage("images/Superhero.png");
+        this.x=x;
+        this.y=y;
+        this.width=width;
+        this.height=height;
         World.add(world,this.body);
     }
     display(){
